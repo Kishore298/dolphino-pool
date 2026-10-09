@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #063B66; /* Deep Navy */
+  --color-secondary: #08A9D9; /* Aqua / Cyan */
+  --color-accent: #65D7E8; /* Light Aqua */
+  
+  /* Additional neutral shades */
+  --color-navy-800: #042A4A;
+  --color-navy-900: #021729;
+  
+  --color-aqua-light: #E6F7FA;
+}
+
+@layer base {
+  html, body {
+    @apply bg-white text-gray-800 font-sans antialiased overflow-x-hidden w-full;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-primary font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-md hover:bg-navy-800 transition-colors duration-300 font-medium;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-md hover:opacity-90 transition-opacity duration-300 font-medium;
+  }
+
+  .btn-outline {
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-md hover:bg-primary hover:text-white transition-colors duration-300 font-medium;
+  }
+
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm border border-gray-100 shadow-xl;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 md:px-8 max-w-7xl mx-auto;
+  }
+}
