@@ -38,17 +38,20 @@ const AboutPreview = ({ settings }) => {
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8 }}
-                    className="relative"
+                    className="relative pb-5 pr-5 md:pb-6 md:pr-6"
                 >
-                    <div className="relative rounded-2xl overflow-hidden shadow-2xl z-10 aspect-[4/3]">
+                    {/* Decorative background card */}
+                    <div
+                        aria-hidden="true"
+                        className="absolute inset-0 top-5 left-5 md:top-6 md:left-6 rounded-3xl bg-gradient-to-br from-aqua-light via-aqua-light to-accent/35 border border-secondary/15 shadow-sm z-0"
+                    ></div>
+                    <div className="relative rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5 z-10 aspect-[4/3]">
                         <img 
                             src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=2070&auto=format&fit=crop" 
                             alt="Luxury Pool Construction" 
                             className="w-full h-full object-cover"
                         />
                     </div>
-                    {/* Decorative element */}
-                    <div className="absolute -bottom-6 -right-6 w-4/5 h-4/5 bg-aqua-light rounded-2xl z-0"></div>
                 </motion.div>
             </div>
         </section>
